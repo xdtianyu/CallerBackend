@@ -1,0 +1,10 @@
+{
+    "app": {
+        "host": "127.0.0.1",
+        "port": 18080,
+        "password": "admin",
+        "locale": "en",
+        "context": "mongo",
+        "monitoring": true
+    }
+}

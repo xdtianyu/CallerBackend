@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/node /opt/adminMongo/app.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=admin-mongo
+User=nobody
+Group=nogroup
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

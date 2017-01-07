@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/node /opt/mongo-express/node_modules/mongo-express/app.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=mongo-express
+User=nobody
+Group=nogroup
+#Environment=
+
+[Install]
+WantedBy=multi-user.target

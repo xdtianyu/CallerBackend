@@ -1,0 +1,13 @@
+[Service]
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=mongoclient
+User=ty
+Group=ty
+Environment=ROOT_URL=http://localhost:3000/mongoclient
+WorkingDirectory=/opt/mongoclient
+ExecStart=/usr/local/bin/meteor --port 3000
+
+[Install]
+WantedBy=multi-user.target

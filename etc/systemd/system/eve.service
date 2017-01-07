@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/opt/eve/venv/bin/python /opt/eve/app.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=eve
+User=nobody
+Group=nogroup
+#Environment=
+
+[Install]
+WantedBy=multi-user.target
