@@ -92,6 +92,10 @@ app.run()
 添加 `systemd` 服务
 
 ```shell
+vi /etc/systemd/system/eve.service
+```
+
+```shell
 [Service]
 ExecStart=/opt/eve/venv/bin/python /opt/eve/app.py
 Restart=always
@@ -128,10 +132,15 @@ sudo apt-get install -y nodejs
 
 ```shell
 mkdir -p /opt/adminMongo && cd /opt/adminMongo
-npm i admin-mongo
+npm i admin-mongo@0.0.20
 ```
 
 修改 `config/app.json` 配置文件内容为
+
+```shell
+mkdir -p /opt/adminMongo/config
+vi /opt/adminMongo/config/app.json
+```
 
 ```json
 {
